@@ -1,16 +1,32 @@
-<h1>{{title}}</h1>
+
+  <!--標題-->
+<p>
+  <mat-toolbar>
+   <button mat-icon-button class="example-icon" 
+                     aria-label="Example icon-button with menu icon"
+                     (click)="sidenav.toggle()">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span>{{title}}</span>
+</mat-toolbar>
+</p>
 
 <mat-sidenav-container>
   
   <!--選單-->
   <mat-sidenav #sidenav mode="side" [(opened)]="opened" (opened)="events.push('open!')"  (closed)="events.push('close!')">
-    <a mat-raised-button routerLink="/dashboard">Dashboard</a>
-    <a mat-raised-button routerLink="/heroes">Heroes</a>    
+
+    <mat-list>
+      <mat-list-item routerLink="/dashboard">Dashboard</mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item routerLink="/heroes">Heroes</mat-list-item>
+      <mat-divider></mat-divider>
+    </mat-list>
+
 </mat-sidenav>
 
   <!--主畫面-->
   <mat-sidenav-content>
-    <p><button mat-button (click)="sidenav.toggle()">選單</button></p>
       <!--Router-->
     <router-outlet></router-outlet>
     <app-messages></app-messages>
