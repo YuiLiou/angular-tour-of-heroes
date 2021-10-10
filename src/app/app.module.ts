@@ -12,7 +12,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
 import {MatButtonModule} from '@angular/material/button';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {DemoMaterialModule} from './material-module';
-
+import { HttpClientModule } from '@angular/common/http';
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { InMemoryDataService } from './in-memory-data.service';
+import { HeroSearchComponent } from './hero-search/hero-search.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +24,7 @@ import {DemoMaterialModule} from './material-module';
     HeroDetailComponent,
     MessagesComponent,
     DashboardComponent,
+    HeroSearchComponent,
   ],
   imports: [
     BrowserModule,
@@ -31,6 +35,11 @@ import {DemoMaterialModule} from './material-module';
     MatButtonModule,
     MatSidenavModule,
     DemoMaterialModule,
+    HttpClientModule,
+    HttpClientInMemoryWebApiModule.forRoot(
+      InMemoryDataService, { dataEncapsulation: false }
+    )
+
   ],
   exports: [MatButtonModule],  // 直接export
   providers: [],
