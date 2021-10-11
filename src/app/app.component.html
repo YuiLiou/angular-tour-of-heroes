@@ -7,7 +7,7 @@
                      (click)="sidenav.toggle()">
     <mat-icon>menu</mat-icon>
   </button>
-  <span>{{title}}</span>
+  <span>{{ title }}</span>
 </mat-toolbar>
 </p>
 
@@ -21,16 +21,20 @@
       <mat-divider></mat-divider>
       <mat-list-item routerLink="/heroes">Heroes</mat-list-item>
       <mat-divider></mat-divider>
+      <mat-list-item routerLink="/heroForm">New Hero</mat-list-item>
+      <mat-divider></mat-divider>
     </mat-list>
 
 </mat-sidenav>
 
   <!--主畫面-->
   <mat-sidenav-content>
-      <!--Router-->
-    <router-outlet></router-outlet>
-    <app-messages></app-messages>
-   
+    
+      <!--Router-->      
+      <router-outlet></router-outlet>
+         <!--Message-->      
+        <app-messages></app-messages>  
+
   </mat-sidenav-content>
 </mat-sidenav-container>
 
