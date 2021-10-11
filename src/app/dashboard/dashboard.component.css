@@ -4,6 +4,10 @@ h2 {
   text-align: center;
 }
 
+.border {
+  max-width: 700px;
+}
+
 .heroes-menu {
   padding: 0;
   margin: auto;
