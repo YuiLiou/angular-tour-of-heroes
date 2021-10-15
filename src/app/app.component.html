@@ -29,12 +29,15 @@
 
   <!--主畫面-->
   <mat-sidenav-content>
-    
+    <div class="FrameTop">
       <!--Router-->      
       <router-outlet></router-outlet>
-         <!--Message-->      
-        <app-messages></app-messages>  
+    </div>
 
+         <!--Message-->      
+     <div class="FrameBottom">
+        <app-messages></app-messages>  
+    </div>
   </mat-sidenav-content>
 </mat-sidenav-container>
 

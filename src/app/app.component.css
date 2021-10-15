@@ -2,6 +2,14 @@ mat-list-item:hover {
     background-color: #ddd;
   }
 
+  .FrameTop {
+    margin: 50px 75px 100px;
+  }
+
+  .FrameBottom {
+    margin: 50px 75px 100px;
+  }
+
   @import url('https://unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css');
 
   
