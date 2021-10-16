@@ -1,15 +1,32 @@
+@import url('https://unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css');
+
 mat-list-item:hover {
     background-color: #ddd;
   }
 
-  .FrameTop {
-    margin: 50px 75px 100px;
+  mat-sidenav-container {
+    height: 90%;
+    margin-bottom: 5%;
   }
 
-  .FrameBottom {
-    margin: 50px 75px 100px;
+  .Container {
+    margin: auto;
+    width:70%;
+    height:100%;
   }
 
-  @import url('https://unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css');
+  .FrameCenter {
+    width:75%;
+    height:100%;
+    float: left;
+    overflow-y: scroll;
+    scrollbar-color: rebeccapurple green;
+    scrollbar-width: thin; 
+  }
 
+  .FrameRight {
+    float: right;
+    width:25%;
+    height:100%;
+  }
   

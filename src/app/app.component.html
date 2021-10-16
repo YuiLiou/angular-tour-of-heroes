@@ -15,7 +15,6 @@
   
   <!--選單-->
   <mat-sidenav #sidenav mode="side" [(opened)]="opened" (opened)="events.push('open!')"  (closed)="events.push('close!')">
-
     <mat-list>
       <mat-list-item routerLink="/dashboard">Dashboard</mat-list-item>
       <mat-divider></mat-divider>
@@ -24,19 +23,20 @@
       <mat-list-item routerLink="/heroForm">New Hero</mat-list-item>
       <mat-divider></mat-divider>
     </mat-list>
-
 </mat-sidenav>
 
   <!--主畫面-->
   <mat-sidenav-content>
-    <div class="FrameTop">
-      <!--Router-->      
-      <router-outlet></router-outlet>
-    </div>
+    <div class="Container">
+      <div class="FrameCenter">
+        <!--Router-->      
+        <router-outlet></router-outlet>    
+      </div>
 
-         <!--Message-->      
-     <div class="FrameBottom">
+      <div class="FrameRight">
+        <!--Message-->      
         <app-messages></app-messages>  
+      </div>
     </div>
   </mat-sidenav-content>
 </mat-sidenav-container>

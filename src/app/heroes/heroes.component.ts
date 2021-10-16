@@ -42,6 +42,4 @@ constructor(private heroService: HeroService) { }
     this.heroService.deleteHero(hero.id).subscribe();
   }
 
-  
-
 }
